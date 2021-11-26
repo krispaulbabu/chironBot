@@ -2,7 +2,6 @@ import praw
 import time
 import threading
 from datetime import datetime
-
 from praw.reddit import Comment
 
 reddit= praw.Reddit(
@@ -12,42 +11,50 @@ reddit= praw.Reddit(
     username="sample_bot79",
     password="kriswashere"
 )
+
 def getPosts(listOfPosts):
   i=0
   for post in listOfPosts:
     i+=1
     print(i,")","Post->",post.permalink)
     aPost=reddit.submission(id=post.id)
-    # if(i==3):
+    aPost.comments.replace_more(limit=None)
     for comment in aPost.comments:
       scrollThru(comment,"-")
-  
+
 def scrollThru(comment,aTab):
   print(aTab,comment.body)
+  if(checkChiron(comment) and not replied(comment)):
+    # print("Over here")
+    comment.reply("quirky chiron comment")
   if(len(comment.replies)!=0):
     for reply in comment.replies:
+      aType=type(reply).__name__
       aTab+="-"
       scrollThru(reply,aTab)
 
 def checkChiron(comment):
-  if "Chiron" in comment.body or "chiron" in comment.body:
+  if "chiron" in comment.body or "Chiron" in comment.body:
     return 1
   return 0
 
 def replied(comment):
+  if(comment.author=="sample_bot79"):
+    return 1
   for reply in comment.replies:
-    if reply.author=="sample_bot79":
+    if(reply.author=="sample_bot79"):
       return 1
   return 0
 
+
 while(True):
   allSubmission=[]
-  subreddit=reddit.subreddit("dankmemes")
+  subreddit=reddit.subreddit("samplecommfortest")
   i=0
   for submission in subreddit.hot():
     allSubmission.append(submission)
     i+=1
-    if i==3:
+    if i==100:
       break
   getPosts(allSubmission)
   time.sleep(5)
