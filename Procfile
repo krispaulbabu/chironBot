@@ -1,1 +1,1 @@
-worker: python main.py
+python chironbot/main.py runserver
