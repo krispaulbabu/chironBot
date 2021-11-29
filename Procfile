@@ -1,1 +1,1 @@
-worker: python chironbot/main.py
+worker: python main.py
