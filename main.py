@@ -16,14 +16,14 @@ def getPosts(listOfPosts):
   i=0
   for post in listOfPosts:
     i+=1
-    # print(i,")","Post->",post.permalink)
+    print(i,")","Post->",post.permalink)
     aPost=reddit.submission(id=post.id)
     aPost.comments.replace_more(limit=None)
     for comment in aPost.comments:
       scrollThru(comment,"-")
 
 def scrollThru(comment,aTab):
-  # print(aTab,comment.body)
+  print(aTab,comment.body)
   if(checkChiron(comment) and not replied(comment)):
     # print("Over here")
     # print(comment.body)
