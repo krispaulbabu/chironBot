@@ -1,1 +1,1 @@
-heroku ps:scale web=gunicorn -a chironbot
+heroku ps:scale web=1
