@@ -1,6 +1,10 @@
-from difflib import SequenceMatcher
+import random
 
-def similar(a,b):
-  return SequenceMatcher(None,a,b).ratio()
+def mention(author):
+  well=mentionComment[0].replace("_Author_",author)
+  print(well)
 
-print(similar("hello there","ereth ohlel"))
+mentionComment=[]
+mentionComment.append("Mr/Ms.Author, did you have a comment")
+
+mention("Gay")

@@ -16,17 +16,19 @@ def getPosts(listOfPosts):
   i=0
   for post in listOfPosts:
     i+=1
-    print(i,")","Post->",post.permalink)
+    # print(i,")","Post->",post.permalink)
     aPost=reddit.submission(id=post.id)
     aPost.comments.replace_more(limit=None)
     for comment in aPost.comments:
       scrollThru(comment,"-")
 
 def scrollThru(comment,aTab):
-  print(aTab,comment.body)
+  # print(aTab,comment.body)
   if(checkChiron(comment) and not replied(comment)):
     # print("Over here")
-    comment.reply("quirky chiron comment")
+    # print(comment.body)
+    # comment.reply("quirky chiron comment")
+    time.sleep(2)
   if(len(comment.replies)!=0):
     for reply in comment.replies:
       aType=type(reply).__name__
@@ -49,7 +51,7 @@ def replied(comment):
 
 while(True):
   allSubmission=[]
-  subreddit=reddit.subreddit("samplecommfortest")
+  subreddit=reddit.subreddit("camphalfblood")
   i=0
   for submission in subreddit.hot():
     allSubmission.append(submission)
@@ -57,4 +59,4 @@ while(True):
     if i==100:
       break
   getPosts(allSubmission)
-  time.sleep(5)
+  time.sleep(3)
