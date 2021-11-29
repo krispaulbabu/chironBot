@@ -1,1 +1,1 @@
-heroku ps:scale web=gunicorn
+heroku ps:scale web=1
