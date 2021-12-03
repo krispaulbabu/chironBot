@@ -1,1 +1,1 @@
-worker: python chironbot/wordbook_bot.py
+worker: python chironbot/main.py
