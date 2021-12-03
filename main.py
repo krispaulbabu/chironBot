@@ -25,9 +25,7 @@ def getPosts(listOfPosts):
 def scrollThru(comment,aTab):
   print(aTab,comment.body)
   if(checkChiron(comment) and not replied(comment)):
-    # print("Over here")
-    # print(comment.body)
-    # comment.reply("quirky chiron comment")
+    comment.reply("quirky chiron comment")
     time.sleep(2)
   if(len(comment.replies)!=0):
     for reply in comment.replies:
@@ -48,8 +46,10 @@ def replied(comment):
       return 1
   return 0
 
+aCount=0
 
 while(True):
+  aCount+=1
   allSubmission=[]
   subreddit=reddit.subreddit("camphalfblood")
   i=0
