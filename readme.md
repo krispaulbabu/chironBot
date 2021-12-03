@@ -1,0 +1,1 @@
+This is a bot that replies to comments in the camp half blood subreddits with quirky chiron quotes. 
