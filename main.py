@@ -51,7 +51,7 @@ aCount=0
 while(True):
   aCount+=1
   allSubmission=[]
-  subreddit=reddit.subreddit("camphalfblood")
+  subreddit=reddit.subreddit("samplecommfortest")
   i=0
   for submission in subreddit.hot():
     allSubmission.append(submission)
