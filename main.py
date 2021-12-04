@@ -1,3 +1,4 @@
+from re import sub
 import praw
 import time
 import threading
@@ -46,17 +47,16 @@ def replied(comment):
       return 1
   return 0
 
-aCount=0
-
 while(True):
-  aCount+=1
   allSubmission=[]
-  subreddit=reddit.subreddit("samplecommfortest")
+  subreddit=reddit.subreddit("camphalfblood")
   i=0
   for submission in subreddit.hot():
     allSubmission.append(submission)
     i+=1
     if i==100:
       break
+  for comment in subreddit.stream.comments():
+    print(comment.body)
   getPosts(allSubmission)
   time.sleep(3)
