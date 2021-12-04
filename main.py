@@ -41,9 +41,9 @@ def checkChiron(comment):
 def replied(comment):
   if(comment.author=="sample_bot79"):
     return 1
-  # for reply in comment.replies:
-  #   if(reply.author=="sample_bot79"):
-  #     return 1
+  for reply in comment.replies:
+    if(reply.author=="sample_bot79"):
+      return 1
   return 0
 
 aCount=0
