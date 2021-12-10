@@ -49,7 +49,7 @@ def replied(comment):
 
 while(True):
   allSubmission=[]
-  subreddit=reddit.subreddit("camphalfblood")
+  subreddit=reddit.subreddit("samplecommfortest")
   i=0
   for submission in subreddit.hot():
     allSubmission.append(submission)
