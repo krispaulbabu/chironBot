@@ -56,7 +56,5 @@ while(True):
     i+=1
     if i==100:
       break
-  for comment in subreddit.stream.comments():
-    print(comment.body)
   getPosts(allSubmission)
   time.sleep(3)
