@@ -22,6 +22,8 @@ def getPosts(listOfPosts):
     aPost.comments.replace_more(limit=None)
     for comment in aPost.comments:
       scrollThru(comment,"-")
+    print("About begin sleep.....")
+    time.sleep(5)
 
 def scrollThru(comment,aTab):
   print(aTab,comment.body)
