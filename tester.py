@@ -16,7 +16,8 @@ def makeAComment(aPost):
   aPost.reply("Chiron")
   print("I've made a comment")
 
-# Just a comment to check if pushing works.
+# Just a comment to check if pushing works
+#Another comment to see if this works
 
 while(True):
   allSubmission=[]
