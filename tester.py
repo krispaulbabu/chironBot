@@ -19,6 +19,9 @@ def makeAComment(aPost):
 # Just a comment to check if pushing works
 #Another comment to see if this works
 
+# Database connection part 
+
+
 while(True):
   allSubmission=[]
   subreddit=reddit.subreddit("samplecommfortest")
