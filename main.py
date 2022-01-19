@@ -4,7 +4,7 @@ import praw
 import time
 from datetime import datetime
 from praw.reddit import Comment
-
+from picker import *
 
 reddit= praw.Reddit(
     client_id="X430vgp1j67BatZ-aHjxqw",
@@ -26,7 +26,7 @@ def getPosts(listOfPosts):
 
 def scrollThru(comment,aTab):
   if(checkChiron(comment) and not replied(comment)):
-    comment.reply("quirky chiron comment")
+    comment.reply(returnLine())
     comment.save()
     time.sleep(2)
   if(len(comment.replies)!=0):
