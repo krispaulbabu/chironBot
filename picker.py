@@ -6,8 +6,7 @@ from numpy import size
 from sympy import linear_eq_to_matrix
 
 def returnLine(comment):
-  # number=random.randrange(0,size(lines))
-  number=1
+  number=random.randrange(0,size(lines))
   line=lines[number]
   line=line.replace("u/Author","u/"+str(comment.author))
   return line
