@@ -3,7 +3,6 @@ from praw.reddit import Comment
 import random
 
 from numpy import size
-from sympy import linear_eq_to_matrix
 
 def returnLine(comment):
   number=random.randrange(0,size(lines))
