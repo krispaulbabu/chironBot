@@ -26,7 +26,7 @@ def getPosts(listOfPosts):
 
 def scrollThru(comment,aTab):
   if(checkChiron(comment) and not replied(comment)):
-    comment.reply(returnLine())
+    comment.reply(returnLine(comment))
     comment.save()
     time.sleep(2)
   if(len(comment.replies)!=0):
