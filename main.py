@@ -6,6 +6,20 @@ from datetime import datetime
 from praw.reddit import Comment
 from picker import *
 
+import psutil
+import threading
+
+
+class Threading():
+  def run(self):
+    while(True):
+      time.sleep(2)
+      print(int(psutil.virtual_memory().active)/1048576)
+
+thread1=Threading()
+
+thread1.run()
+
 reddit= praw.Reddit(
     client_id="X430vgp1j67BatZ-aHjxqw",
     client_secret="QBLYkz-RzYstXpNtTjRTSJRVI0wdRw",

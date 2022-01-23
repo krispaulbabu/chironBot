@@ -15,6 +15,9 @@ def returnLine(comment):
 lines=[
   "Im sure the boy can learn", 
   "Ah, good, u/Author, now we have four for Pinochle",
-  "I must say Percy, Im glad to see you alive"
+  "I must say Percy, Im glad to see you alive",
+  "What you learn from me, is vitally important. I expect you to treat it as such. I will accept only the best from you, u/Author.",
+  "What ho, u/Author!",
+  "Ah, that would be my pen. Please bring your own writing utensil in the future, u/Author"
   ]
 
