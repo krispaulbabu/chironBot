@@ -6,9 +6,6 @@ from datetime import datetime
 from praw.reddit import Comment
 from picker import *
 
-import psutil
-import threading
-
 reddit= praw.Reddit(
     client_id="X430vgp1j67BatZ-aHjxqw",
     client_secret="QBLYkz-RzYstXpNtTjRTSJRVI0wdRw",
