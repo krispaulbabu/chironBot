@@ -50,7 +50,7 @@ def replied(comment):
 
 while(True):
   allSubmission=[]
-  subreddit=reddit.subreddit("camphalfblood")
+  subreddit=reddit.subreddit("samplecommfortest")
   for submission in subreddit.stream.submissions():
     allSubmission.append(submission)
   getPosts(allSubmission)
