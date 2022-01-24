@@ -36,7 +36,7 @@ def scrollThru(comment,aTab):
       scrollThru(reply,aTab)
 
 def checkChiron(comment):
-  if "chiron" in comment.body or "Chiron" in comment.body:
+  if "chiron" in comment.body or "Chiron" in comment.body or "Brunner" in comment.body:
     return 1
   return 0
 
@@ -50,12 +50,8 @@ def replied(comment):
 
 while(True):
   allSubmission=[]
-  subreddit=reddit.subreddit("samplecommfortest")
-  i=0
-  for submission in subreddit.hot():
+  subreddit=reddit.subreddit("camphalfblood")
+  for submission in subreddit.stream.submissions():
     allSubmission.append(submission)
-    i+=1
-    if i==100:
-      break
   getPosts(allSubmission)
   time.sleep(3)

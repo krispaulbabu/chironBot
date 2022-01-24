@@ -19,7 +19,7 @@ lines=[
   "What you learn from me, is vitally important. I expect you to treat it as such. I will accept only the best from you, u/Author.",
   "What ho, u/Author!",
   "Ah, that would be my pen. Please bring your own writing utensil in the future, u/Author",
-  "We would only make matters worse by rushing him, We need the boy to mature more.",
+  "We would only make matters worse by rushing him, We need u/Author to mature more.",
   "Nothing, My nerves haven't been right since the winter solstice."
   ]
 
