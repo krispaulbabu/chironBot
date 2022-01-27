@@ -51,7 +51,7 @@ def replied(comment):
 while(True):
   allSubmission=[]
   subreddit=reddit.subreddit("samplecommfortest")
-  for submission in subreddit.stream.submissions():
+  for submission in subreddit.hot():
     allSubmission.append(submission)
   getPosts(allSubmission)
   time.sleep(3)
